@@ -17,11 +17,11 @@ let pokemonList = [
   }
 ];
 
-// Loop that first checks their their height and then writes their name & height on the page and in addition if they are big enough they will also get a message next to their stats
-for (let i = 0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 2) {
-    sizealert = `- Wow, that's big!`;
+// Function that prints the pokemonList elements and checks if they exceed a certain height. If they do, a message will appear next to their information noting their large stature.
+pokemonList.forEach(function(list){
+  if (list.height > 2) {
+    sizeAlert = ` - Wow, that's big!`;
   } else {
-    sizealert = ''; 
-  } document.write(`<p> ${pokemonList[i].name} (Height: ${pokemonList[i].height}) ${sizealert} </p>`);
-}
+    sizeAlert = ''; 
+  } document.write(`<p> ${list.name} (Height: ${list.height}) ${sizeAlert} </p>`);
+});
